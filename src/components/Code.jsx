@@ -1,8 +1,7 @@
-import React from "react";
+import PropTypes from "prop-types";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { a11yDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { toast } from "sonner";
-
 const CodeBlock = ({ codeString, language }) => {
   const handleCopy = () => {
     navigator.clipboard
@@ -33,4 +32,8 @@ const CodeBlock = ({ codeString, language }) => {
   );
 };
 
+CodeBlock.propTypes = {
+  codeString: PropTypes.string.isRequired,
+  language: PropTypes.string.isRequired,
+};
 export default CodeBlock;

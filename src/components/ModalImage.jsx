@@ -1,6 +1,6 @@
+import PropTypes from "prop-types";
 import { useCallback } from "react";
 import useAppContext from "../hooks/useAppContext";
-
 export function Modal({ changeModal }) {
   const { dispatch } = useAppContext();
 
@@ -133,3 +133,6 @@ export function Modal({ changeModal }) {
     </div>
   );
 }
+Modal.propTypes = {
+  changeModal: PropTypes.func,
+};

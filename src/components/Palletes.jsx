@@ -1,6 +1,7 @@
+import PropTypes from "prop-types";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-export default function Palettes({ pallettes }) {
+function Palettes({ pallettes }) {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   return (
     <ul className="flex flex-wrap mx-auto">
@@ -49,3 +50,7 @@ export default function Palettes({ pallettes }) {
     </ul>
   );
 }
+Palettes.propTypes = {
+  pallettes: PropTypes.array,
+};
+export default Palettes;

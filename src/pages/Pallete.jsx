@@ -94,9 +94,6 @@ export default function Pallette() {
               </button>
             </li>
           </ul>
-          <button className="border border-white/60 hover:border-white hover:text-white rounded-lg px-2 py-1">
-            Favoritos
-          </button>
         </footer>
       </div>
       {codeType && (
