@@ -7,7 +7,7 @@ function App() {
   return (
     <React.Fragment>
       <NavBar />
-      <div className="p-5 bg-white dark:bg-gray-900 mt-[68px]">
+      <div className="p-5 flex flex-col bg-white dark:bg-gray-900 mt-[68px] min-h-screen">
         <AppRoutes />
 
         <Footer></Footer>

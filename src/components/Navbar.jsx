@@ -33,7 +33,7 @@ export default function NavBar() {
           </div>
         </div>
       </nav>
-      {showModal && <Modal isOpen={showModal} changeModal={changeModal} />}
+      {showModal && <Modal changeModal={changeModal} />}
     </>
   );
 }

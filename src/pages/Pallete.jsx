@@ -22,7 +22,7 @@ export default function Pallette() {
   const htmlCode = pallette.colors
     .map(
       (color, index) =>
-        `<div class="text-[${color.color}]">color${index + 1}</div>`
+        `<div class="text-[${color.color}]">\n    color${index + 1}\n</div>`
     )
     .join("\n");
 
@@ -34,12 +34,12 @@ export default function Pallette() {
   };
 
   return (
-    <section className="flex flex-col items-center gap-5 px-4 sm:px-6 lg:px-8">
+    <section className="flex-grow flex flex-col items-center gap-5 px-4 sm:px-6 lg:px-8">
       <h1 className="text-3xl dark:text-white font-semibold">
         {pallette.name}
       </h1>
       <div className="dark:bg-black/20 rounded-lg w-full max-w-4xl">
-        <ul className="flex flex-wrap justify-center">
+        <ul className="flex justify-center ">
           {pallette.colors.map((color) => (
             <li
               key={color.id}
@@ -48,8 +48,8 @@ export default function Pallette() {
               onMouseOut={() => setHoveredIndex(null)}
               className={`flex justify-center items-center transition-all duration-300 m-1 ${
                 color.id === hoveredIndex
-                  ? "h-32 w-20 z-10 sm:h-96 sm:w-44"
-                  : "h-32 w-16 sm:h-96 sm:w-32"
+                  ? "h-20 w-20 z-10 sm:h-80 sm:w-40"
+                  : "h-20 w-16 sm:h-80 sm:w-32"
               } ${
                 color.id === pallette.colors[0].id
                   ? "rounded-tl-lg rounded-bl-lg"
