@@ -18,4 +18,4 @@ AppProvider.propTypes = {
   children: PropTypes.node,
 };
 
-export default AppContext;
+export default AppProvider;
